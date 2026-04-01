@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel | Glow & Care</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Montserrat', sans-serif; background-color: #fff; color: #1a1a1a; padding: 0; margin: 0; }
+        .admin-container { max-width: 1000px; margin: 50px auto; padding: 20px; }
+        .admin-header { display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #eee; padding-bottom: 20px; margin-bottom: 40px; }
+        .admin-header h1 { font-weight: 500; letter-spacing: 2px; font-size: 24px; margin: 0; }
+        .back-link { text-decoration: none; color: #999; font-size: 12px; text-transform: uppercase; letter-spacing: 1px; transition: 0.3s; }
+        .back-link:hover { color: #000; }
+
+        /* Стиль форми додавання */
+        .add-product-card { background: #fdf2f2; padding: 30px; border-radius: 15px; margin-bottom: 50px; }
+        .add-product-card h3 { margin-top: 0; font-weight: 500; font-size: 18px; margin-bottom: 20px; }
+        .form-grid { display: grid; grid-template-columns: 2fr 1fr 1fr auto; gap: 15px; align-items: end; }
+        .input-group { display: flex; flex-direction: column; gap: 8px; }
+        .input-group label { font-size: 10px; color: #777; text-transform: uppercase; }
+        .input-group input { padding: 12px; border: 1px solid #ddd; border-radius: 5px; outline: none; }
+        .btn-save { background: #000; color: #fff; border: none; padding: 13px 25px; border-radius: 5px; cursor: pointer; transition: 0.3s; font-size: 12px; }
+        .btn-save:hover { background: #333; }
+
+        /* Стиль таблиці */
+        .product-table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+        .product-table th { text-align: left; padding: 15px; border-bottom: 2px solid #000; font-size: 12px; text-transform: uppercase; color: #888; }
+        .product-table td { padding: 20px 15px; border-bottom: 1px solid #eee; font-size: 14px; }
+        .product-name { font-weight: 500; }
+        .btn-delete { background: none; border: none; color: #dba9a9; text-decoration: underline; cursor: pointer; font-size: 12px; transition: 0.3s; }
+        .btn-delete:hover { color: #ff4d4d; }
+        
+        .price-tag { font-family: 'Inter', sans-serif; }
+    </style>
+</head>
+<body>
+
+    <div class="admin-container">
+        <header class="admin-header">
+            <h1>GLOW & CARE <span style="font-weight: 300; font-size: 14px; color: #ccc;">| ADMIN</span></h1>
+            <a href="/" class="back-link">← Повернутися на сайт</a>
+        </header>
+
+        <section class="add-product-card">
+            <h3>ДОДАТИ НОВИЙ ЗАСІБ</h3>
+            <form action="/add-product" method="POST" class="form-grid">
+                <div class="input-group">
+                    <label>Назва продукту</label>
+                    <input type="text" name="name" placeholder="Напр: GLOW SERUM" required>
+                </div>
+                <div class="input-group">
+                    <label>Ціна (₴)</label>
+                    <input type="number" name="price" placeholder="820" required>
+                </div>
+                <div class="input-group">
+                    <label>Назва фото</label>
+                    <input type="text" name="image" placeholder="product-1.png">
+                </div>
+                <button type="submit" class="btn-save">ЗБЕРЕГТИ</button>
+            </form>
+        </section>
+
+        <section>
+            <h3 style="font-weight: 500; margin-bottom: 20px;">СПИСОК ТОВАРІВ У БАЗІ</h3>
+            <table class="product-table">
+                <thead>
+                    <tr>
+                        <th>Продукт</th>
+                        <th>Ціна</th>
+                        <th>Дії</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% products.forEach(p => { %>
+                        <tr>
+                            <td class="product-name"><%= p.name %></td>
+                            <td class="price-tag">₴<%= p.price %>.00</td>
+                            <td>
+                                <form action="/delete-product/<%= p.id %>" method="POST" style="margin:0;">
+                                    <button type="submit" class="btn-delete">Видалити</button>
+                                </form>
+                            </td>
+                        </tr>
+                    <% }); %>
+                </tbody>
+            </table>
+        </section>
+    </div>
+
+</body>
+</html>

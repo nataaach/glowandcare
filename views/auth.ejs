@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Glow & Care | Авторизація</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&display=swap" rel="stylesheet">
+    <style>
+        .auth-container { max-width: 400px; margin: 100px auto; padding: 40px; background: #fff; border: 1px solid #eee; text-align: center; }
+        .auth-toggle { display: flex; justify-content: center; gap: 20px; margin-bottom: 30px; }
+        .toggle-btn { background: none; border: none; font-family: 'Montserrat'; cursor: pointer; color: #ccc; text-transform: uppercase; letter-spacing: 1px; font-size: 14px; }
+        .toggle-btn.active { color: #000; font-weight: 500; border-bottom: 1px solid #000; }
+        .auth-form { display: flex; flex-direction: column; gap: 15px; }
+        .auth-form input { padding: 12px; border: 1px solid #ddd; outline: none; font-family: 'Montserrat'; }
+        .hidden { display: none; }
+        .switch-text { margin-top: 20px; font-size: 12px; color: #777; }
+        .switch-link { color: #dba9a9; cursor: pointer; text-decoration: underline; }
+    </style>
+</head>
+<body>
+    <header class="header container"><div class="logo"><a href="/">GLOW & CARE</a></div></header>
+
+    <div class="auth-container">
+        <div class="auth-toggle">
+            <button id="show-login" class="toggle-btn active">Вхід</button>
+            <button id="show-register" class="toggle-btn">Реєстрація</button>
+        </div>
+
+        <form id="login-form" class="auth-form" action="/login" method="POST">
+            <input type="email" name="email" placeholder="Email" required>
+            <input type="password" name="password" placeholder="Пароль" required>
+            <button type="submit" class="btn-primary">УВІЙТИ</button>
+            <p class="switch-text">Немає акаунту? <span class="switch-link" onclick="toggleAuth('register')">Створити зараз</span></p>
+        </form>
+
+        <form id="register-form" class="auth-form hidden" action="/register" method="POST">
+            <input type="text" name="username" placeholder="Ім'я" required>
+            <input type="email" name="email" placeholder="Email" required>
+            <input type="password" name="password" placeholder="Пароль" required>
+            <button type="submit" class="btn-primary">СТВОРИТИ АККАУНТ</button>
+            <p class="switch-text">Вже є акаунт? <span class="switch-link" onclick="toggleAuth('login')">Увійти</span></p>
+        </form>
+    </div>
+
+    <script>
+        function toggleAuth(type) {
+            const loginForm = document.getElementById('login-form');
+            const registerForm = document.getElementById('register-form');
+            const loginBtn = document.getElementById('show-login');
+            const registerBtn = document.getElementById('show-register');
+
+            if (type === 'register') {
+                loginForm.classList.add('hidden');
+                registerForm.classList.remove('hidden');
+                loginBtn.classList.remove('active');
+                registerBtn.classList.add('active');
+            } else {
+                registerForm.classList.add('hidden');
+                loginForm.classList.remove('hidden');
+                registerBtn.classList.remove('active');
+                loginBtn.classList.add('active');
+            }
+        }
+
+        document.getElementById('show-login').addEventListener('click', () => toggleAuth('login'));
+        document.getElementById('show-register').addEventListener('click', () => toggleAuth('register'));
+    </script>
+</body>
+</html>

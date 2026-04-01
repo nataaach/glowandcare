@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Glow & Care | Український бренд косметики</title>
+    
+    <link rel="stylesheet" href="/css/style.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400&family=Montserrat:wght@300;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="announcement-bar">
+        <p>Безкоштовна доставка від 1500 грн по Україні </p>
+    </div>
+
+    <header class="header">
+        <div class="container header-flex">
+            <div class="header-left">
+                <button class="burger-icon" aria-label="Меню"><span></span></button>
+            </div>
+            
+            <div class="logo">
+                <a href="/">GLOW & CARE</a>
+            </div>
+
+            <div class="header-links">
+                <a href="/admin" class="text-link" style="color: #dba9a9;">ADMIN</a>
+                <a href="/auth" class="text-link">ВХІД</a>
+                <a href="#" class="text-link">ПОШУК</a>
+                <a href="#" class="text-link">КОШИК (<span class="cart-count">0</span>)</a>
+            </div>
+        </div>
+    </header>
+
+    <main id="MainContent">
+        
+        <section class="hero">
+            <div class="hero-image-wrapper">
+                <div class="hero-content">
+                    <p class="hero-subtitle">Тільки з 1 по 20 квітня</p>
+                    <h1 class="hero-title">IT’S TIME TO SHINE</h1>
+                </div>
+            </div>
+        </section>
+
+      <section class="products-section container" id="favorites">
+    <h2 class="section-heading">ФАВОРИТИ</h2>
+    
+    <div class="product-grid">
+        <% products.forEach(product => { %>
+            <article class="product-item">
+                <div class="product-media">
+                    <% if (product.price < 500) { %>
+                        <span class="badge-sale">Sale</span>
+                    <% } %>
+                
+<img src="/scrin/product-<%= product.id %>.png" alt="<%= product.name %>" loading="lazy">
+                </div>
+
+                <div class="product-meta">
+                    <h3 class="product-title"><%= product.name %></h3>
+                    <div class="product-rating">⭐⭐⭐⭐⭐ (42)</div>
+                    <p class="product-price">₴<%= product.price %>.00 UAH</p>
+                    <button class="btn-atc">В кошик</button>
+                </div>
+            </article>
+        <% }); %>
+    </div>
+</section>
+        <section class="container" style="margin-top: 80px; margin-bottom: 80px;">
+            <h2 class="section-heading">КАТЕГОРІЇ</h2>
+            <div class="categories-grid">
+                <% categories.forEach(category => { %>
+                    <a href="#" class="category-card" style="background-image: url('/scrin/<%= category.image || 'care.png' %>');">
+                        <span class="category-name"><%= category.category_name %></span>
+                    </a>
+                <% }); %>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-col footer-brand">
+                <div class="footer-logo">GLOW & CARE</div>
+                <p class="footer-tagline">Твій щоденний ритуал сяйва та догляду за собою.</p>
+                <div class="footer-socials">
+                    <a href="#" class="social-link">INSTAGRAM</a>
+                    <a href="#" class="social-link">TIKTOK</a>
+                    <a href="#" class="social-link">PINTEREST</a>
+                </div>
+            </div>
+
+            <div class="footer-col">
+                <h4 class="footer-title">МАГАЗИН</h4>
+                <ul class="footer-links">
+                    <li><a href="#favorites">Фаворити</a></li>
+                    <li><a href="#">Всі товари</a></li>
+                    <li><a href="#">Набори</a></li>
+                    <li><a href="/admin">Адмін-панель</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4 class="footer-title">ДОПОМОГА</h4>
+                <ul class="footer-links">
+                    <li><a href="#">Доставка та оплата</a></li>
+                    <li><a href="#">Повернення</a></li>
+                    <li><a href="#">Контакти</a></li>
+                    <li><a href="#">FAQ</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col footer-newsletter-col">
+                <h4 class="footer-title">ПІДПИСКА</h4>
+                <p class="footer-text">Отримуй секретні пропозиції та поради по догляду.</p>
+                <form class="newsletter-form" action="/register" method="POST">
+                    <input type="email" name="email" placeholder="Твій email" required>
+                    <button type="submit" aria-label="Підписатися">→</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="footer-copy">© 2026, GLOW & CARE. КИЇВ, УКРАЇНА.</div>
+            <div class="footer-dev">DESIGNED BY NATALIA</div>
+        </div>
+    </div>
+</footer>
+
+    <script src="/js/main.js"></script>
+</body>
+</html>
