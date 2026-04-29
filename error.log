@@ -1,0 +1,2 @@
+2026-04-21T18:28:46.609Z - Incorrect datetime value: '0000-00-00 00:00:00' for column `cosmetics_shop_db`.`users`.`createdAt` at row 1
+2026-04-29T10:46:33.982Z - Cannot destructure property 'email' of 'req.body' as it is undefined.

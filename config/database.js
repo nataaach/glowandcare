@@ -5,5 +5,4 @@ const sequelize = new Sequelize('cosmetics_shop_db', 'root', '', {
     dialect: 'mysql',
     logging: false
 });
-
 module.exports = sequelize;
