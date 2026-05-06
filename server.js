@@ -330,7 +330,7 @@ app.get("/confirm/:token", async (req, res) => {
     }
 });
 
-// --- ЗАВДАННЯ 20. Google Auth ---
+//ЗАВДАННЯ 20. 
 app.post('/api/auth/google', async (req, res) => {
     try {
         const { idToken } = req.body;

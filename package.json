@@ -1,9 +1,33 @@
 {
 	"dependencies": {
 		"bcryptjs": "^3.0.3",
-		"jsonwebtoken": "^9.0.3",
+		"dotenv": "^17.4.2",
+		"express": "^5.2.1",
 		"express-rate-limit": "^8.3.2",
 		"google-auth-library": "^10.6.2",
-		"dotenv": "^17.4.2"
-	}
+		"jsonwebtoken": "^9.0.3",
+		"morgan": "^1.10.1",
+		"multer": "^2.1.1",
+		"winston": "^3.19.0"
+	},
+	"name": "glowandcare",
+	"version": "1.0.0",
+	"description": "",
+	"main": "server.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"start": "node server.js"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/nataaach/glowandcare.git"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"type": "commonjs",
+	"bugs": {
+		"url": "https://github.com/nataaach/glowandcare/issues"
+	},
+	"homepage": "https://github.com/nataaach/glowandcare#readme"
 }

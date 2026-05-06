@@ -1,0 +1,137 @@
+{"level":"info","message":"Server started"}
+{"level":"info","message":"Server started"}
+{"level":"info","message":"Server started"}
+{"level":"info","message":"Server started"}
+{"level":"info","message":"Server started"}
+{"level":"info","message":"Server started"}
+{"level":"info","message":"Server started"}
+{"level":"info","message":"Server started"}
+{"level":"info","message":"Server started"}
+{"level":"info","message":"Server started"}
+{"level":"info","message":"Server started"}
+{"level":"info","message":"Server started"}
+{"level":"info","message":"Server started"}
+{"level":"info","message":"Server started"}
+{"level":"info","message":"Server started"}
+{"level":"info","message":"Server started","timestamp":"2026-05-06T12:25:50.085Z"}
+{"level":"error","message":"[ERROR] GET /error-test - Штучна помилка для перевірки логгера!","timestamp":"2026-05-06T12:26:03.351Z"}
+{"level":"info","message":"[Performance] GET /error-test оброблено за 13ms","timestamp":"2026-05-06T12:26:03.363Z"}
+{"level":"error","message":"[ERROR] GET /error-test - Штучна помилка для перевірки логгера!","timestamp":"2026-05-06T12:37:14.723Z"}
+{"level":"info","message":"[Performance] GET /error-test оброблено за 1ms","timestamp":"2026-05-06T12:37:14.725Z"}
+{"level":"error","message":"[ERROR] POST /upload - Дозволені лише файли форматів JPG, PNG та PDF!","timestamp":"2026-05-06T12:45:21.355Z"}
+{"level":"info","message":"[Performance] POST /upload оброблено за 8ms","timestamp":"2026-05-06T12:45:21.357Z"}
+{"level":"info","message":"Server started","timestamp":"2026-05-06T12:49:24.842Z"}
+{"level":"info","message":"[Performance] GET /status оброблено за 9ms","timestamp":"2026-05-06T12:49:58.408Z"}
+{"level":"info","message":"Server started","timestamp":"2026-05-06T12:57:13.333Z"}
+{"level":"info","message":"Server started","timestamp":"2026-05-06T12:57:16.383Z"}
+{"level":"info","message":"Server started","timestamp":"2026-05-06T12:57:19.566Z"}
+{"level":"info","message":"Server started","timestamp":"2026-05-06T12:57:22.620Z"}
+{"level":"info","message":"Server started","timestamp":"2026-05-06T12:57:25.833Z"}
+{"level":"info","message":"Server started","timestamp":"2026-05-06T12:57:29.010Z"}
+{"level":"info","message":"Server started","timestamp":"2026-05-06T12:57:32.157Z"}
+{"level":"info","message":"Server started","timestamp":"2026-05-06T12:57:35.311Z"}
+{"level":"info","message":"Server started","timestamp":"2026-05-06T12:57:38.463Z"}
+{"level":"info","message":"Server started","timestamp":"2026-05-06T12:57:41.633Z"}
+{"level":"info","message":"Server started","timestamp":"2026-05-06T12:57:44.824Z"}
+{"level":"info","message":"Server started","timestamp":"2026-05-06T12:57:47.976Z"}
+{"level":"info","message":"Server started","timestamp":"2026-05-06T12:57:51.169Z"}
+{"level":"info","message":"Server started","timestamp":"2026-05-06T12:57:54.326Z"}
+{"level":"info","message":"Server started","timestamp":"2026-05-06T12:57:57.431Z"}
+{"level":"info","message":"Server started","timestamp":"2026-05-06T12:58:00.628Z"}
+{"level":"info","message":"Server started","timestamp":"2026-05-06T12:58:03.809Z"}
+{"level":"info","message":"Server started","timestamp":"2026-05-06T12:58:06.961Z"}
+{"level":"info","message":"Server started","timestamp":"2026-05-06T12:58:10.091Z"}
+{"level":"info","message":"Server started","timestamp":"2026-05-06T12:58:13.257Z"}
+{"level":"info","message":"Server started","timestamp":"2026-05-06T12:58:16.392Z"}
+{"level":"info","message":"Server started","timestamp":"2026-05-06T12:58:19.581Z"}
+{"level":"info","message":"Server started","timestamp":"2026-05-06T12:58:22.693Z"}
+{"level":"info","message":"Server started","timestamp":"2026-05-06T12:58:25.837Z"}
+{"level":"info","message":"Server started","timestamp":"2026-05-06T12:58:28.988Z"}
+{"level":"info","message":"Server started","timestamp":"2026-05-06T12:58:32.209Z"}
+{"level":"info","message":"Server started","timestamp":"2026-05-06T12:58:35.311Z"}
+{"level":"info","message":"Server started","timestamp":"2026-05-06T12:58:38.448Z"}
+{"level":"info","message":"Server started","timestamp":"2026-05-06T12:58:41.681Z"}
+{"level":"info","message":"Server started","timestamp":"2026-05-06T12:58:44.851Z"}
+{"level":"info","message":"Server started","timestamp":"2026-05-06T12:58:47.983Z"}
+{"level":"info","message":"Server started","timestamp":"2026-05-06T12:58:51.222Z"}
+{"level":"info","message":"Server started","timestamp":"2026-05-06T12:58:54.375Z"}
+{"level":"info","message":"Server started","timestamp":"2026-05-06T12:58:57.508Z"}
+{"level":"info","message":"Server started","timestamp":"2026-05-06T12:59:00.675Z"}
+{"level":"info","message":"Server started","timestamp":"2026-05-06T12:59:03.870Z"}
+{"level":"info","message":"Server started","timestamp":"2026-05-06T12:59:07.048Z"}
+{"level":"info","message":"Server started","timestamp":"2026-05-06T12:59:10.201Z"}
+{"level":"info","message":"Server started","timestamp":"2026-05-06T12:59:13.370Z"}
+{"level":"info","message":"Server started","timestamp":"2026-05-06T12:59:16.474Z"}
+{"level":"error","message":"[ERROR] GET /error-test - Штучна помилка для перевірки логгера!","timestamp":"2026-05-06T12:59:17.872Z"}
+{"level":"info","message":"[Performance] GET /error-test оброблено за 3ms","timestamp":"2026-05-06T12:59:17.874Z"}
+{"level":"info","message":"Server started","timestamp":"2026-05-06T12:59:19.607Z"}
+{"level":"error","message":"[ERROR] GET /error-test - Штучна помилка для перевірки логгера!","timestamp":"2026-05-06T12:59:20.080Z"}
+{"level":"info","message":"[Performance] GET /error-test оброблено за 3ms","timestamp":"2026-05-06T12:59:20.082Z"}
+{"level":"error","message":"[ERROR] GET /error-test - Штучна помилка для перевірки логгера!","timestamp":"2026-05-06T12:59:22.725Z"}
+{"level":"info","message":"[Performance] GET /error-test оброблено за 1ms","timestamp":"2026-05-06T12:59:22.726Z"}
+{"level":"info","message":"Server started","timestamp":"2026-05-06T12:59:22.772Z"}
+{"level":"error","message":"[ERROR] GET /error-test - Штучна помилка для перевірки логгера!","timestamp":"2026-05-06T12:59:22.932Z"}
+{"level":"info","message":"[Performance] GET /error-test оброблено за 2ms","timestamp":"2026-05-06T12:59:22.934Z"}
+{"level":"error","message":"[ERROR] GET /error-test - Штучна помилка для перевірки логгера!","timestamp":"2026-05-06T12:59:23.202Z"}
+{"level":"info","message":"[Performance] GET /error-test оброблено за 1ms","timestamp":"2026-05-06T12:59:23.203Z"}
+{"level":"error","message":"[ERROR] GET /error-test - Штучна помилка для перевірки логгера!","timestamp":"2026-05-06T12:59:23.384Z"}
+{"level":"info","message":"[Performance] GET /error-test оброблено за 1ms","timestamp":"2026-05-06T12:59:23.385Z"}
+{"level":"error","message":"[ERROR] GET /error-test - Штучна помилка для перевірки логгера!","timestamp":"2026-05-06T12:59:23.547Z"}
+{"level":"info","message":"[Performance] GET /error-test оброблено за 1ms","timestamp":"2026-05-06T12:59:23.548Z"}
+{"level":"error","message":"[ERROR] GET /error-test - Штучна помилка для перевірки логгера!","timestamp":"2026-05-06T12:59:23.758Z"}
+{"level":"info","message":"[Performance] GET /error-test оброблено за 1ms","timestamp":"2026-05-06T12:59:23.760Z"}
+{"level":"error","message":"[ERROR] GET /error-test - Штучна помилка для перевірки логгера!","timestamp":"2026-05-06T12:59:24.100Z"}
+{"level":"info","message":"[Performance] GET /error-test оброблено за 1ms","timestamp":"2026-05-06T12:59:24.101Z"}
+{"level":"error","message":"[ERROR] GET /error-test - Штучна помилка для перевірки логгера!","timestamp":"2026-05-06T12:59:24.287Z"}
+{"level":"info","message":"[Performance] GET /error-test оброблено за 1ms","timestamp":"2026-05-06T12:59:24.288Z"}
+{"level":"error","message":"[ERROR] GET /error-test - Штучна помилка для перевірки логгера!","timestamp":"2026-05-06T12:59:24.499Z"}
+{"level":"info","message":"[Performance] GET /error-test оброблено за 0ms","timestamp":"2026-05-06T12:59:24.500Z"}
+{"level":"error","message":"[ERROR] GET /error-test - Штучна помилка для перевірки логгера!","timestamp":"2026-05-06T12:59:24.969Z"}
+{"level":"info","message":"[Performance] GET /error-test оброблено за 1ms","timestamp":"2026-05-06T12:59:24.970Z"}
+{"level":"error","message":"[ERROR] GET /error-test - Штучна помилка для перевірки логгера!","timestamp":"2026-05-06T12:59:25.178Z"}
+{"level":"info","message":"[Performance] GET /error-test оброблено за 1ms","timestamp":"2026-05-06T12:59:25.179Z"}
+{"level":"error","message":"[ERROR] GET /error-test - Штучна помилка для перевірки логгера!","timestamp":"2026-05-06T12:59:25.301Z"}
+{"level":"info","message":"[Performance] GET /error-test оброблено за 1ms","timestamp":"2026-05-06T12:59:25.302Z"}
+{"level":"error","message":"[ERROR] GET /error-test - Штучна помилка для перевірки логгера!","timestamp":"2026-05-06T12:59:25.427Z"}
+{"level":"info","message":"[Performance] GET /error-test оброблено за 1ms","timestamp":"2026-05-06T12:59:25.428Z"}
+{"level":"error","message":"[ERROR] GET /error-test - Штучна помилка для перевірки логгера!","timestamp":"2026-05-06T12:59:25.549Z"}
+{"level":"info","message":"[Performance] GET /error-test оброблено за 1ms","timestamp":"2026-05-06T12:59:25.550Z"}
+{"level":"error","message":"[ERROR] GET /error-test - Штучна помилка для перевірки логгера!","timestamp":"2026-05-06T12:59:25.675Z"}
+{"level":"info","message":"[Performance] GET /error-test оброблено за 1ms","timestamp":"2026-05-06T12:59:25.676Z"}
+{"level":"error","message":"[ERROR] GET /error-test - Штучна помилка для перевірки логгера!","timestamp":"2026-05-06T12:59:25.802Z"}
+{"level":"info","message":"[Performance] GET /error-test оброблено за 1ms","timestamp":"2026-05-06T12:59:25.804Z"}
+{"level":"error","message":"[ERROR] GET /error-test - Штучна помилка для перевірки логгера!","timestamp":"2026-05-06T12:59:25.928Z"}
+{"level":"info","message":"[Performance] GET /error-test оброблено за 1ms","timestamp":"2026-05-06T12:59:25.929Z"}
+{"level":"info","message":"Server started","timestamp":"2026-05-06T12:59:25.936Z"}
+{"level":"error","message":"[ERROR] GET /error-test - Штучна помилка для перевірки логгера!","timestamp":"2026-05-06T12:59:27.395Z"}
+{"level":"info","message":"[Performance] GET /error-test оброблено за 1ms","timestamp":"2026-05-06T12:59:27.396Z"}
+{"level":"error","message":"[ERROR] GET /error-test - Штучна помилка для перевірки логгера!","timestamp":"2026-05-06T12:59:27.561Z"}
+{"level":"info","message":"[Performance] GET /error-test оброблено за 1ms","timestamp":"2026-05-06T12:59:27.562Z"}
+{"level":"error","message":"[ERROR] GET /error-test - Штучна помилка для перевірки логгера!","timestamp":"2026-05-06T12:59:27.742Z"}
+{"level":"info","message":"[Performance] GET /error-test оброблено за 1ms","timestamp":"2026-05-06T12:59:27.743Z"}
+{"level":"error","message":"[ERROR] GET /error-test - Штучна помилка для перевірки логгера!","timestamp":"2026-05-06T12:59:27.894Z"}
+{"level":"info","message":"[Performance] GET /error-test оброблено за 1ms","timestamp":"2026-05-06T12:59:27.895Z"}
+{"level":"error","message":"[ERROR] GET /error-test - Штучна помилка для перевірки логгера!","timestamp":"2026-05-06T12:59:28.107Z"}
+{"level":"info","message":"[Performance] GET /error-test оброблено за 1ms","timestamp":"2026-05-06T12:59:28.108Z"}
+{"level":"info","message":"Server started","timestamp":"2026-05-06T12:59:29.071Z"}
+{"level":"info","message":"Server started","timestamp":"2026-05-06T12:59:32.238Z"}
+{"level":"info","message":"Server started","timestamp":"2026-05-06T12:59:35.357Z"}
+{"level":"info","message":"Server started","timestamp":"2026-05-06T12:59:38.516Z"}
+{"level":"info","message":"Server started","timestamp":"2026-05-06T12:59:41.677Z"}
+{"level":"info","message":"Server started","timestamp":"2026-05-06T12:59:44.822Z"}
+{"level":"info","message":"Server started","timestamp":"2026-05-06T12:59:47.990Z"}
+{"level":"info","message":"Server started","timestamp":"2026-05-06T12:59:51.123Z"}
+{"level":"info","message":"Server started","timestamp":"2026-05-06T12:59:54.309Z"}
+{"level":"info","message":"Server started","timestamp":"2026-05-06T12:59:57.475Z"}
+{"level":"info","message":"Server started","timestamp":"2026-05-06T13:00:00.582Z"}
+{"level":"info","message":"Server started","timestamp":"2026-05-06T13:00:03.781Z"}
+{"level":"info","message":"Server started","timestamp":"2026-05-06T13:00:06.898Z"}
+{"level":"info","message":"Server started","timestamp":"2026-05-06T13:00:10.082Z"}
+{"level":"info","message":"Server started","timestamp":"2026-05-06T13:00:13.242Z"}
+{"level":"info","message":"Server started","timestamp":"2026-05-06T13:00:16.389Z"}
+{"level":"info","message":"Server started","timestamp":"2026-05-06T13:00:19.543Z"}
+{"level":"info","message":"Server started","timestamp":"2026-05-06T13:00:22.757Z"}
+{"level":"info","message":"Server started","timestamp":"2026-05-06T13:00:25.871Z"}
+{"level":"info","message":"Server started","timestamp":"2026-05-06T13:00:29.094Z"}
+{"level":"info","message":"Server started","timestamp":"2026-05-06T13:00:32.229Z"}
+{"level":"info","message":"Server started","timestamp":"2026-05-06T13:00:35.399Z"}
