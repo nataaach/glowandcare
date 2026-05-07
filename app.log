@@ -135,3 +135,7 @@
 {"level":"info","message":"Server started","timestamp":"2026-05-06T13:00:29.094Z"}
 {"level":"info","message":"Server started","timestamp":"2026-05-06T13:00:32.229Z"}
 {"level":"info","message":"Server started","timestamp":"2026-05-06T13:00:35.399Z"}
+{"level":"info","message":"[Performance] GET / оброблено за 9ms","timestamp":"2026-05-07T07:47:44.478Z"}
+{"level":"error","message":"[ERROR] POST /upload-multiple - File too large","timestamp":"2026-05-07T07:48:24.865Z"}
+{"level":"info","message":"[Performance] POST /upload-multiple оброблено за 91ms","timestamp":"2026-05-07T07:48:24.866Z"}
+{"level":"info","message":"[Performance] GET /status оброблено за 2ms","timestamp":"2026-05-07T07:48:47.493Z"}
