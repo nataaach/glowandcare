@@ -8,14 +8,11 @@ const fs = require('fs');
 const app = express();
 const PORT = 3000;
 
-// Автоматичне створення папки uploads, якщо її немає (щоб не було помилок)
 if (!fs.existsSync('uploads')) {
     fs.mkdirSync('uploads');
 }
 
-// ==========================================
 // Завдання 3: Файлове логування подій (Winston)
-// ==========================================
 const logger = winston.createLogger({
     level: 'info',
     format: winston.format.combine(
@@ -28,14 +25,11 @@ const logger = winston.createLogger({
     ]
 });
 
-// ==========================================
-// Завдання 2: Логування HTTP-запитів
-// ==========================================
+
+// Завдання 2
 app.use(morgan('combined')); 
 
-// ==========================================
-// Завдання 9: Вимірювання часу відповіді
-// ==========================================
+// Завдання 9
 app.use((req, res, next) => {
     const start = Date.now();
     res.on('finish', () => {
@@ -47,9 +41,7 @@ app.use((req, res, next) => {
     next();
 });
 
-// ==========================================
-// Завдання 7: Валідація файлів (Multer)
-// ==========================================
+// Завдання 7: Валідація файлів 
 const storage = multer.diskStorage({
     destination: (req, file, cb) => {
         cb(null, 'uploads/');
@@ -76,11 +68,6 @@ const upload = multer({
     limits: { fileSize: 2 * 1024 * 1024 }, 
     fileFilter: fileFilter
 });
-
-
-// ==========================================
-// МАРШРУТИ (Endpoints)
-// ==========================================
 
 // Завдання 1: Ініціалізація
 app.get('/', (req, res) => {
