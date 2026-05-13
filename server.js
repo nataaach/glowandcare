@@ -25,7 +25,47 @@ const limiter = rateLimit({
     max: 2000, // максимум 100 запитів з одного IP
     message: { error: "Забагато запитів, спробуйте пізніше" }
 });
-//app.use(limiter);
+require('dotenv').config();
+
+require('dotenv').config();
+
+const dbConfig = {
+    host: process.env.DB_HOST,
+    user: process.env.DB_USER,
+    password: process.env.DB_PASSWORD,
+    database: process.env.DB_NAME
+};
+
+const jwtSecret = process.env.JWT_SECRET;
+const swaggerUi = require('swagger-ui-express');
+const swaggerJsdoc = require('swagger-jsdoc');
+const swaggerOptions = {
+    definition: {
+        openapi: '3.0.0',
+        info: {
+            title: 'Glow & Care API',
+            version: '1.0.0',
+            description: 'Документація REST API для магазину косметики Glow & Care',
+        },
+        servers: [{ url: 'http://localhost:3000' }],
+        components: {
+            securitySchemes: {
+                bearerAuth: {
+                    type: 'http',
+                    scheme: 'bearer',
+                    bearerFormat: 'JWT',
+                },
+            },
+        },
+    },
+    apis: ['./server.js'], 
+};
+
+const swaggerSpec = swaggerJsdoc(swaggerOptions);
+app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerSpec));
+
+app.use(limiter);
+
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
@@ -74,10 +114,28 @@ const authenticateToken = (req, res, next) => {
         res.status(401).json({ message: "Недійсний токен" });
     }
 };
+/**
+ * @swagger
+ * /:
+ *   get:
+ *     summary: Головна сторінка (EJS)
+ *     description: Відображає головну сторінку з продуктами та категоріями. Використовує кешування.
+ *     tags: [Views]
+ *     responses:
+ *       200:
+ *         description: HTML сторінка успішно завантажена
+ */
 
-
-// --- МАРШРУТИ ---
-
+/**
+ * @swagger
+ * /api/products:
+ *   get:
+ *     summary: Отримати всі товари (JSON)
+ *     tags: [Products]
+ *     responses:
+ *       200:
+ *         description: Масив об'єктів товарів
+ */
 // --- ЗАВДАННЯ 11. Додано кешування для головної сторінки ---
 app.get('/', async (req, res) => {
     try {
@@ -107,7 +165,104 @@ app.get('/api/products', async (req, res) => {
         res.status(500).json({ error: "Помилка при отриманні товарів" });
     }
 }); 
+/**
+ * @swagger
+ * /register:
+ *   post:
+ *     summary: Реєстрація нового користувача
+ *     tags: [Auth]
+ *     requestBody:
+ *       required: true
+ *       content:
+ *         application/json:
+ *           schema:
+ *             type: object
+ *             properties:
+ *               username: { type: string }
+ *               email: { type: string }
+ *               password: { type: string }
+ *               confirmPassword: { type: string }
+ *     responses:
+ *       201:
+ *         description: Користувача створено
+ */
 
+/**
+ * @swagger
+ * /login:
+ *   post:
+ *     summary: Вхід у систему
+ *     tags: [Auth]
+ *     responses:
+ *       200:
+ *         description: Повертає JWT та Refresh Token
+ *       401:
+ *         description: Невірні дані
+ */
+
+/**
+ * @swagger
+ * /api/auth/google:
+ *   post:
+ *     summary: Вхід через Google
+ *     tags: [Auth]
+ *     responses:
+ *       200:
+ *         description: Успішна авторизація через Google
+ */
+/**
+ * @swagger
+ * /profile:
+ *   get:
+ *     summary: Отримати дані профілю
+ *     tags: [Profile]
+ *     security:
+ *       - bearerAuth: []  # Це активує замок для цього маршруту
+ *     responses:
+ *       200:
+ *         description: Дані поточного користувача
+ */
+app.get('/profile', (req, res) => {
+    res.send('Сторінка профілю працює!');
+});
+/**
+ * @swagger
+ * /profile/update:
+ *   put:
+ *     summary: Оновити ім'я або пароль
+ *     tags: [Profile]
+ *     security:
+ *       - bearerAuth: []
+ *     responses:
+ *       200:
+ *         description: Профіль оновлено
+ */
+
+/**
+ * @swagger
+ * /profile/change-password:
+ *   post:
+ *     summary: Зміна пароля користувача
+ *     tags: [Profile]
+ *     security:
+ *       - bearerAuth: []
+ *     responses:
+ *       200:
+ *         description: Пароль успішно змінено
+ */
+
+/**
+ * @swagger
+ * /profile/delete:
+ *   delete:
+ *     summary: Видалення облікового запису
+ *     tags: [Profile]
+ *     security:
+ *       - bearerAuth: []
+ *     responses:
+ *       200:
+ *         description: Акаунт видалено
+ */
 app.get('/admin', authenticateToken, async (req, res) => {
     try {
         const products = await db.Product.findAll();
@@ -144,7 +299,7 @@ app.delete("/profile/delete", authenticateToken, async (req, res) => {
         res.status(500).json({ message: "Помилка при видаленні акаунта" });
     }
 });
-//ЗАВДАННЯ 16
+
 app.post("/profile/change-password", authenticateToken, async (req, res) => {
     try {
         const { oldPassword, newPassword, confirmNewPassword } = req.body;
@@ -180,6 +335,43 @@ app.post("/profile/change-password", authenticateToken, async (req, res) => {
         res.status(500).json({ message: "Помилка при зміні пароля" });
     }
 });
+/**
+ * @swagger
+ * /create-order:
+ *   post:
+ *     summary: Створити нове замовлення
+ *     tags: [Orders]
+ *     responses:
+ *       201:
+ *         description: Замовлення прийнято
+ */
+
+/**
+ * @swagger
+ * /add-product:
+ *   post:
+ *     summary: Додати новий товар (Admin)
+ *     tags: [Admin]
+ *     responses:
+ *       302:
+ *         description: Редірект в адмінку
+ */
+
+/**
+ * @swagger
+ * /delete-product/{id}:
+ *   post:
+ *     summary: Видалити товар (Admin)
+ *     tags: [Admin]
+ *     parameters:
+ *       - in: path
+ *         name: id
+ *         required: true
+ *         schema: { type: integer }
+ *     responses:
+ *       302:
+ *         description: Товар видалено
+ */
 // Маршрут для створення замовлення в магазині Glow & Care
 app.post('/create-order', [
     body('customerName').notEmpty().withMessage("Будь ласка, вкажіть ваше ім'я"), 
@@ -298,7 +490,40 @@ app.post('/register', async (req, res) => {
 
 
 
+/**
+ * @swagger
+ * /refresh-token:
+ *   post:
+ *     summary: Оновити Access Token
+ *     tags: [Tokens]
+ *     responses:
+ *       200:
+ *         description: Новий токен видано
+ */
 
+/**
+ * @swagger
+ * /forgot-password:
+ *   post:
+ *     summary: Запит на відновлення пароля
+ *     tags: [Auth]
+ *     responses:
+ *       200:
+ *         description: Інструкції надіслано на пошту
+ */
+
+/**
+ * @swagger
+ * /logout:
+ *   post:
+ *     summary: Вихід із системи
+ *     tags: [Auth]
+ *     security:
+ *       - bearerAuth: []
+ *     responses:
+ *       200:
+ *         description: Вихід успішний
+ */
 app.post('/login', loginLimiter, async (req, res) => {
     try {
         const { email, password } = req.body;
@@ -480,16 +705,22 @@ app.post('/delete-product/:id', async (req, res) => {
     } catch (err) { logError(err); res.status(500).send("Помилка"); }
 });
 
-
-const startServer = async () => {
+   const startServer = async () => {
     try {
         await db.sequelize.authenticate();
-        console.log(' MySQL підключено');
-        await db.sequelize.sync({ alter: true });
-        const PORT = 3000;
-        app.listen(PORT, () => console.log(` Сервер: http://localhost:${PORT}`));
-    } catch (err) { logError(err); }
-};
+        console.log('MySQL підключено успішно');
 
+        await db.sequelize.sync({ alter: true });
+        console.log('База даних синхронізована');
+
+        const PORT = process.env.PORT || 3000;
+        app.listen(PORT, () => {
+            console.log(`Сервер працює на порту ${PORT}`);
+        });
+
+    } catch (error) {
+        console.error('Неможливо підключитися до бази даних:', error);
+    }
+};
 
 startServer();

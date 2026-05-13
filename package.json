@@ -24,6 +24,8 @@
         "mysql2": "^3.22.3",
         "node-cache": "^5.1.2",
         "sequelize": "^6.37.8",
+        "swagger-jsdoc": "^6.2.8",
+        "swagger-ui-express": "^5.0.1",
         "winston": "^3.19.0"
     },
     "devDependencies": {
